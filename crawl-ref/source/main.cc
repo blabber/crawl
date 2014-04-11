@@ -2156,9 +2156,11 @@ void process_command(command_type cmd)
             canned_msg(MSG_OK);
         break;
 
+#ifdef WIZARD
     case CMD_LUA_CONSOLE:
-        debug_terp_dlua(clua); break;
+        debug_terp_dlua(clua);
         break;
+#endif
 
     case CMD_NO_CMD:
     default:
